@@ -1,0 +1,49 @@
+Spec2Tests Sample Specification: User Account Management
+==========================================================
+
+1. Introduction
+----------------
+This document describes the functional requirements for the user account
+management module of the Spec2Tests platform. It is intended to be used as
+a realistic, on-disk fixture for automated tests that exercise the plain
+text extraction pipeline end to end.
+
+2. Functional Requirements
+---------------------------
+2.1 Registration
+The system shall allow a new user to register an account by providing a
+unique email address and a password that is at least eight characters long.
+If the supplied email address is already registered, the system shall
+reject the registration attempt and display a clear validation error
+message to the user.
+
+2.2 Login
+The system shall allow a registered user to log in using their email
+address and password. If the credentials are invalid, the system shall
+display an authentication error message and shall not grant access to any
+protected resource.
+
+2.3 Password Reset
+The system shall allow a user who has forgotten their password to request
+a password reset link via email. The reset link shall expire after 24
+hours. Attempting to use an expired or already-used reset link shall
+result in a clear error message instructing the user to request a new
+link.
+
+2.4 Account Lockout
+The system shall temporarily lock an account for 15 minutes after five
+consecutive failed login attempts, in order to mitigate brute-force
+credential guessing attacks.
+
+3. Non-Functional Requirements
+--------------------------------
+3.1 The login endpoint shall respond within 500 milliseconds under normal
+load conditions.
+3.2 All passwords shall be stored using a salted, one-way cryptographic
+hash; plaintext passwords shall never be persisted or logged.
+
+4. Out of Scope
+-----------------
+Single sign-on (SSO) integration with third-party identity providers is
+explicitly out of scope for this specification and will be addressed in a
+future revision.

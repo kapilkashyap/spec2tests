@@ -1,0 +1,19 @@
+Business Requirements Document (BRD)
+A BRD explains why the business needs a project and what high-level goals it must hit.
+
+Project Name
+Smart Delivery Window Saver
+
+Business Goals
+* Reduce missed grocery deliveries by 30% within three months of launch.
+* Lower customer support chat volume regarding failed deliveries by 20%.
+* Prevent the spoilage of fresh and frozen food caused by delayed second trips.
+
+Project Scope
+* In Scope: Sending text messages or push alerts to customers 60 minutes before delivery, building a live map tracking link, and adding a one-click button to delay the drop-off time by 30 or 60 minutes.
+* Out of Scope: Changing delivery addresses after the driver has left the warehouse.
+
+Key Stakeholders
+* Operations Team: Manages drivers and delivery routes.
+* Customer Support Team: Handles customer complaints and refunds.
+* End Users: Grocery shoppers who need their items delivered safely.

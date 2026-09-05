@@ -1,0 +1,15 @@
+Functional Requirements Document (FRD)
+An FRD explains how the system must work and what features the software needs to have.
+
+System Features
+* Automated SMS Alert:
+    * The system must send a text message to the customer exactly 60 minutes before the driver arrives.
+    * The text must include a secure web link.
+* Reschedule Interface:
+    * When the customer clicks the link, a mobile web page opens.
+    * The page shows two buttons: "I am ready" and "Delay by 30 minutes".
+* Driver Route Update:
+    * If the customer clicks "Delay", the system updates the driver’s route map instantly.
+    * The system notifies the driver to visit the next stop on the route first.
+* Time-Out Rule:
+    * If the customer does not click either button within 15 minutes of receiving the text, the driver receives an alert to call the customer directly.

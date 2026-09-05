@@ -1,0 +1,32 @@
+# Environment
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Uploaded/generated artifacts (runtime data, not source)
+uploads/
+tmp/

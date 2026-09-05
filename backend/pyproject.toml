@@ -1,0 +1,39 @@
+[project]
+name = "spec2tests-backend"
+version = "0.1.0"
+description = "Spec2Tests backend: upload specification documents and generate structured test cases via Google Gemini."
+requires-python = ">=3.11,<3.12"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["app", "tests"]
+exclude = [
+    ".venv",
+    "venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "I",   # isort
+    "W",   # pycodestyle warnings
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+]
+ignore = [
+    "E501", # line length handled by formatter/reviewer discretion
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra -q"
